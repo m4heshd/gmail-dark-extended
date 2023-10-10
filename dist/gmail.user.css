@@ -8,57 +8,38 @@
 @author         m4heshd
 @description    Extended styles for Gmail's dark theme
 ==/UserStyle== */
-
 /* Variables */
-$bg-color-1: #212121;
-$text-color-1: #bbbbbb;
-$text-color-2: #999999;
-$text-color-selection: #78b4f8;
-
 @-moz-document url-prefix("https://mail.google.com/mail") {
   /* Email viewer */
-  // Background
   .iY {
     background: transparent !important;
   }
-
   /* Email cards */
-  // Shopping invoice card
   .nH.qY {
-    background-color: $bg-color-1;
+    background-color: #212121;
     box-shadow: none !important;
-
-    .t1 {
-      color: $text-color-1 !important;
-    }
-
-    .t2, .vL {
-      color: $text-color-2;
-    }
-
-    .vU {
-      color: $text-color-1;
-    }
-
-    .tk > div:first-child {
-      filter: invert(100%);
-    }
   }
-
+  .nH.qY .t1 {
+    color: #bbbbbb !important;
+  }
+  .nH.qY .t2, .nH.qY .vL {
+    color: #999999;
+  }
+  .nH.qY .vU {
+    color: #bbbbbb;
+  }
+  .nH.qY .tk > div:first-child {
+    filter: invert(100%);
+  }
   /* Email body */
   .gs .ii.gt {
-    // Container
     filter: invert(93.2%) hue-rotate(180deg);
-
-    // Images
-    & img {
-      filter: invert(100%) hue-rotate(180deg) contrast(120%) saturate(120%);
-    }
-
-    // Text selection
-    & ::selection {
-      color: $text-color-selection !important;
-      background: #000;
-    }
+  }
+  .gs .ii.gt img {
+    filter: invert(100%) hue-rotate(180deg) contrast(120%) saturate(120%);
+  }
+  .gs .ii.gt ::selection {
+    color: #78b4f8 !important;
+    background: #000;
   }
 }
