@@ -12,5 +12,9 @@
     "url": "https://github.com/m4heshd/gmail-dark-extended/issues"
   },
   "homepage": "https://github.com/m4heshd/gmail-dark-extended#readme",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "14.1.1",
+    "sass": "1.69.1"
+  }
 }
