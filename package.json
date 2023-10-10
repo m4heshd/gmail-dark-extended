@@ -3,6 +3,10 @@
   "description": "Extended styles for Gmail's dark theme",
   "private": true,
   "version": "0.1.0",
+  "scripts": {
+    "compile": "node compile.js",
+    "serve": "http-server ./dist -p 8383"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/m4heshd/gmail-dark-extended.git"
