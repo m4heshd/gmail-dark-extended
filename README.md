@@ -35,3 +35,7 @@ Or you can buy me a "ko-fi" by clicking this button
 
 Once you install using the above method, the userstyle will be automatically updated by Stylus when new updates are
 pushed to this repository.
+
+# License
+
+This work is licensed under [MIT License](./LICENSE).
