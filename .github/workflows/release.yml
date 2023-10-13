@@ -1,0 +1,32 @@
+name: release
+
+on:
+  release:
+    types:
+      - released
+
+jobs:
+  compile-and-publish:
+    name: Compile stylesheets and upload release assets
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout repo
+      - uses: actions/checkout@v3
+      # Set up Node
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
+      # Compile stylesheets
+      - name: Compile stylesheets
+        run: npm run compile
+      # Upload release assets
+      - name: Upload assets to release ${{ github.event.release.tag_name }}
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            ./dist/gmail.user.css
