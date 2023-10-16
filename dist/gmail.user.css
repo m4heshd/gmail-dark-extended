@@ -9,6 +9,7 @@
 @description    Extended styles for Gmail's dark theme
 ==/UserStyle== */
 /* Variables */
+/* Mixins */
 @-moz-document url-prefix("https://mail.google.com/mail") {
   /* Email viewer */
   .iY {
@@ -41,5 +42,28 @@
   .gs .ii.gt ::selection {
     color: #78b4f8 !important;
     background: #000;
+  }
+  /* New Message Editor */
+  .AD, .aSt {
+    filter: invert(93.2%) hue-rotate(180deg);
+  }
+  .AD .az2 .J-JN-M-I-Jm, .aSt .az2 .J-JN-M-I-Jm {
+    color: black;
+  }
+  .AD .J-M, .aSt .J-M {
+    filter: invert(93.2%) hue-rotate(180deg);
+  }
+  .AD img, .aSt img {
+    filter: invert(100%) hue-rotate(180deg) contrast(120%) saturate(120%);
+  }
+  .AD ::selection, .aSt ::selection {
+    color: #78b4f8 !important;
+    background: #000;
+  }
+  .afC {
+    filter: invert(93.2%) hue-rotate(180deg);
+  }
+  .afC .afH {
+    filter: invert(100%) hue-rotate(180deg) contrast(120%) saturate(120%);
   }
 }

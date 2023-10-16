@@ -10,10 +10,23 @@
 ==/UserStyle== */
 
 /* Variables */
+// Colors
 $bg-color-1: #212121;
 $text-color-1: #bbbbbb;
 $text-color-2: #999999;
 $text-color-selection: #78b4f8;
+
+// Properties
+$invert-colors: invert(93.2%) hue-rotate(180deg);
+$revert-img-invert: invert(100%) hue-rotate(180deg) contrast(120%) saturate(120%);
+
+/* Mixins */
+@mixin text-selection-fix {
+  & ::selection {
+    color: $text-color-selection !important;
+    background: #000;
+  }
+}
 
 @-moz-document url-prefix("https://mail.google.com/mail") {
   /* Email viewer */
@@ -48,17 +61,46 @@ $text-color-selection: #78b4f8;
   /* Email body */
   .gs .ii.gt {
     // Container
-    filter: invert(93.2%) hue-rotate(180deg);
+    filter: $invert-colors;
 
     // Images
     & img {
-      filter: invert(100%) hue-rotate(180deg) contrast(120%) saturate(120%);
+      filter: $revert-img-invert;
     }
 
     // Text selection
-    & ::selection {
-      color: $text-color-selection !important;
-      background: #000;
+    @include text-selection-fix;
+  }
+
+  /* New Message Editor */
+  .AD, .aSt {
+    // Editor
+    filter: $invert-colors;
+
+    // From selector
+    .az2 .J-JN-M-I-Jm {
+      color: black;
+    }
+
+    & .J-M {
+      filter: $invert-colors;
+    }
+
+    // Images
+    & img {
+      filter: $revert-img-invert;
+    }
+
+    // Text selection
+    @include text-selection-fix;
+  }
+
+  // Recipient selector
+  .afC {
+    filter: $invert-colors;
+
+    & .afH {
+      filter: $revert-img-invert;
     }
   }
 }
