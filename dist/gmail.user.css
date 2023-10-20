@@ -43,20 +43,20 @@
     color: #78b4f8 !important;
     background: #000;
   }
-  /* New Message Editor */
-  .AD, .aSt {
+  /* New Message Editor and Reply Editor */
+  .AD, .aSt, .gA .I5 {
     filter: invert(93.2%) hue-rotate(180deg);
   }
-  .AD .az2 .J-JN-M-I-Jm, .aSt .az2 .J-JN-M-I-Jm {
+  .AD .az2 .J-JN-M-I-Jm, .aSt .az2 .J-JN-M-I-Jm, .gA .I5 .az2 .J-JN-M-I-Jm {
     color: black;
   }
-  .AD .J-M, .aSt .J-M {
+  .AD .J-M, .aSt .J-M, .gA .I5 .J-M {
     filter: invert(93.2%) hue-rotate(180deg);
   }
-  .AD img, .aSt img {
+  .AD img:not(.uC > img), .aSt img:not(.uC > img), .gA .I5 img:not(.uC > img) {
     filter: invert(100%) hue-rotate(180deg) contrast(120%) saturate(120%);
   }
-  .AD ::selection, .aSt ::selection {
+  .AD ::selection, .aSt ::selection, .gA .I5 ::selection {
     color: #78b4f8 !important;
     background: #000;
   }

@@ -72,8 +72,8 @@ $revert-img-invert: invert(100%) hue-rotate(180deg) contrast(120%) saturate(120%
     @include text-selection-fix;
   }
 
-  /* New Message Editor */
-  .AD, .aSt {
+  /* New Message Editor and Reply Editor */
+  .AD, .aSt, .gA .I5 {
     // Editor
     filter: $invert-colors;
 
@@ -87,7 +87,7 @@ $revert-img-invert: invert(100%) hue-rotate(180deg) contrast(120%) saturate(120%
     }
 
     // Images
-    & img {
+    & img:not(.uC > img) {
       filter: $revert-img-invert;
     }
 
