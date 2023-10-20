@@ -7,6 +7,7 @@ used in combination with [`google-redesigned`](https://github.com/EvHaus/google-
 
 - Dark mode for email content
 - Dark mode for "New message" editor
+- Dark mode for reply editor
 
 # Support this project 🙏🏽
 
